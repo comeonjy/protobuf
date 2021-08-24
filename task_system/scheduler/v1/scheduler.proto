@@ -3,9 +3,16 @@ syntax = "proto3";
 package task_system.scheduler.v1;
 
 import "base.proto";
+import "google/api/annotations.proto";
+
 
 option go_package = "protobuf/task_system/scheduler/v1;v1";
 
 service Scheduler{
-  rpc Ping (Empty) returns (Result) {}
+  rpc Ping (Empty) returns (Result) {
+    option (google.api.http) = {
+      post: "/v1/example/ping"
+      body: "*"
+    };
+  }
 }
