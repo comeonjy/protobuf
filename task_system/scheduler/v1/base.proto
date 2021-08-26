@@ -9,7 +9,7 @@ option go_package = "protobuf/task_system/scheduler/v1;v1";
 message Result{
   int64 code = 1;
   string message = 2;
-  google.protobuf.Any metadata = 3;
+  google.protobuf.Any data = 3;
 }
 
 message Empty{

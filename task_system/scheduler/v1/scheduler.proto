@@ -19,7 +19,7 @@ service Scheduler{
       post: "/v1/example/get_source"
       body: "*"
       additional_bindings {
-        post: "/v2/example/get_source/{source_id}"
+        get: "/v2/example/get_source/{source_id}"
       }
     };
   }
