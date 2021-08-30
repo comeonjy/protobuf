@@ -1,2 +1,2 @@
 task_system_scheduler:
-	cd task_system/scheduler && make proto
+	go generate ./task_system/scheduler/v1
